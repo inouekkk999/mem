@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*============================================================================
+
++非操作領域
+	+SelectorReset
+	+TextModule
+	+HypertextModule
+	+ListModule
+	+FormsModule
+	+ImageModule
+	+OtherModule
+
++便利クラス定義
+	+float
+	+clearFix
+	+margin, padding
+	+FontSetting
+
+==============================================================================*/
+
+
+
+/*============================================================================
+
+	+非操作領域
+	
+==============================================================================*/
+
+/*--------------------------------------
+	+SelectorReset
+---------------------------------------*/
+html, body, div, h1, h2, h3, h4, h5, h6,
+blockquote, pre, address, ul, ol, li, dl, dt, dd,
+table, th, td, form, fieldset, input {
+	margin: 0;
+	padding: 0;
+} 
+body {
+	font-size:14px;
+	line-height:1.3;
+	-webkit-text-size-adjust:none;
+	font-family: Helvetica, Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'モリサワ 新ゴ R', 'Droid Sans', メイリオ, 'sans-serif';
+	margin-bottom: -30px;
+}
+h1,h2,h3,h4,h5{
+	font-weight:normal;
+}
+
+
+/*--------------------------------------
+	+TextModule
+---------------------------------------*/
+
+p,
+pre,
+blockquote,
+address,
+cite {
+	margin: 0;
+	line-height: 1.3;
+	word-break: break-all;
+}
+
+address {
+	font-style: normal;
+}
+.w_br {
+	word-break: break-all!important;
+}
+
+.txtR {text-align:right;}
+.txtC {text-align: center;}
+
+/*--------------------------------------
+	+HypertextModule
+---------------------------------------*/
+
+a:link {
+	color: #006699;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #3365CB;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #006699;
+	text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+a:hover {
+	color: #006699;
+	text-decoration: none;
+	opacity:1;
+}
+}
+
+
+/*--------------------------------------
+	+ListModule
+---------------------------------------*/
+
+ul,
+ol,
+dl {
+	list-style: none;
+}
+
+/*--------------------------------------
+	+FormsModule
+---------------------------------------*/
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+/*--------------------------------------
+	+ImageModule
+---------------------------------------*/
+
+img {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: bottom;
+}
+
+/*--------------------------------------
+	+OtherModule
+---------------------------------------*/
+
+hr {
+	border-top: solid 1px #cccccc;
+	border-right: none 0px #cccccc;
+	border-left: none 0px #cccccc;
+	border-bottom: none 0px #cccccc;
+	height: 1px;
+	margin: 0px 0 20px 0;
+}
+
+
+
+/*============================================================================
+
+	+便利クラス定義
+	
+==============================================================================*/
+
+/*--------------------------------------
+	+float
+---------------------------------------*/
+
+.img_L {
+	margin-right: 2em!important;
+	margin-bottom: 1em!important;
+	float: left;
+}
+@media screen and (max-width:640px){
+	.img_L {
+		text-align: center!important;
+		display: block;
+		margin-right: 0em!important;
+		margin-bottom: 1em!important;
+		float: none;
+		clear: both;
+	}
+}
+
+.img_R {
+	margin-left: 2em!important;
+	margin-bottom: 1em!important;
+	float: right;
+}
+@media screen and (max-width:640px){
+	.img_R {
+		text-align: center!important;
+		display: block;
+		margin-left: 0em!important;
+		margin-bottom: 1em!important;
+		float: none;
+		clear: both;
+	}
+}
+
+/*--------------------------------------
+	+clearFix
+---------------------------------------*/
+
+.clearFix::after {
+	height: 0;
+	visibility: hidden;
+	content: ".";
+	display: block;
+	clear: both;
+}
+
+.clearFix {
+	_height: 1px;
+	min-height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+/* for MacIE5 \*//*/
+.clearFix {
+	height: auto;
+	overflow: hidden;
+}
+/* end */
+
+/*--------------------------------------
+	+margin, padding
+---------------------------------------*/
+.mp0{margin: 0px!important;padding: 0px!important;}
+
+.mB0{margin-bottom: 0px!important;}
+.mB5{margin-bottom: 5px!important;}
+.mB10{margin-bottom: 10px!important;}
+.mB15{margin-bottom: 15px!important;}
+.mB20{margin-bottom: 20px!important;}
+.mB25{margin-bottom: 25px!important;}
+.mB30{margin-bottom: 30px!important;}
+.mB35{margin-bottom: 35px!important;}
+.mB40{margin-bottom: 40px!important;}
+.mB45{margin-bottom: 45px!important;}
+.mB50{margin-bottom: 50px!important;}
+
+.mT0{margin-top: 0px!important;}
+.mT5{margin-top: 5px!important;}
+.mT10{margin-top: 10px!important;}
+.mT15{margin-top: 15px!important;}
+.mT20{margin-top: 20px!important;}
+.mT25{margin-top: 25px!important;}
+.mT30{margin-top: 30px!important;}
+.mT35{margin-top: 35px!important;}
+.mT40{margin-top: 40px!important;}
+.mT45{margin-top: 45px!important;}
+.mT50{margin-top: 50px!important;}
+
+.mSide10{margin: 0 10px!important;}
+.mSide20{margin: 0 20px!important;}
+.mSide30{margin: 0 30px!important;}
+
+.pSide10{padding: 0 10px!important;}
+.pSide20{padding: 0 20px!important;}
+.pSide30{padding: 0 30px!important;}
+
+.padding5 {padding: 5px 0!important;}
+.padding10{padding: 10px 0!important;}
+.padding20{padding: 20px 0!important;}
+.padding30 {padding: 30px 0!important;}
+
+
+/*--------------------------------------
+	+FontSetting
+---------------------------------------*/
+
+.strong {font-weight: bold;}
+.f10 {font-size: 10px;}
+.f12 {font-size: 12px;}
+.f14 {font-size: 14px;}
+.f16 {font-size: 16px;}
+.f18 {font-size: 18px;}
+.f20 {font-size: 20px;}
+.f22 {font-size: 22px;}
+.f24 {font-size: 24px;}
+
+/*--------------------------------------
+	+image
+---------------------------------------*/
+
+.image50 img{width:50%;height:auto;margin:0 auto;display:block;}
+.image80 img{width:80%;height:auto;margin:0 auto;display:block;}
+.image100 img{width:100%;height:auto;margin:0 auto;display:block;}
+
+/*--------------------------------------
+	+FontColor  140814追加
+---------------------------------------*/
+
+.fcRed{
+	color: #ff0000;
+}
